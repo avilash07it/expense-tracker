@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth - Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <h2 style="margin:0" class="logo">KoinTrackr</h2>
+            <nav id="topNav">
+                <a href="index.html">Expenses</a>
+                <a href="report.html">Report</a>
+                <a href="register.html" class="active">Auth</a>
+            </nav>
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </header>
+
+
+        <div class="container" style="max-width:400px; margin: 40px auto;">
+            <div class="form-card">
+                <h3 style="margin-top:0">Login</h3>
+                <div class="auth-group" style="display: flex; flex-direction: column; gap: 15px;">
+                    <input id="login_username" type="text" placeholder="Username" autocomplete="username">
+                    <input id="login_password" type="password" placeholder="Password" autocomplete="current-password">
+                    <button onclick="login()">Login</button>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin: 20px 0; color: var(--text-dim); font-size: 14px;">OR</div>
+
+            <div class="form-card">
+                <h3 style="margin-top:0">Register</h3>
+                <div class="auth-group" style="display: flex; flex-direction: column; gap: 15px;">
+                    <input id="register_username" type="text" placeholder="Username" autocomplete="new-username">
+                    <input id="register_password" type="password" placeholder="Password" autocomplete="new-password">
+                    <button onclick="register()"
+                        style="background: transparent; border: 1px solid var(--accent); color: var(--accent);">
+                        Create Account
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="register.js"></script>
+</body>
+
+</html>
